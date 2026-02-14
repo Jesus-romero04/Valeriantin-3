@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const errorMsg = document.getElementById('login-error-msg');
     const retryBtn = document.getElementById('retry-btn');
 
-    const VALID_USER = "71338540";
-    const VALID_PASS = "140923";
+    const VALID_USER = "valeriaparra";
+    const VALID_PASS = "valeriantin";
 
     if (loginOverlay && localStorage.getItem('valentine_login') === 'true') {
         loginOverlay.classList.add('hidden');
