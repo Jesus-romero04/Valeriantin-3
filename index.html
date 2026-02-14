@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para mi prometida, Valeria</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="flowers.css">
+</head>
+
+<body>
+
+    <!-- fondo animado -->
+    <div id="hearts-container"></div>
+
+
+    <div id="login-overlay" class="overlay">
+        <div class="login-card glass-card">
+            <h2>Bienvenid@</h2>
+            <p>Ingrese las credenciales para ingresar a la página.</p>
+            <form id="login-form">
+                <input type="text" id="username" placeholder="Usuario" required autocomplete="off">
+                <input type="password" id="password" placeholder="Contraseña" required autocomplete="off">
+                <button type="submit" class="btn-login">Entrar</button>
+            </form>
+            <p id="login-error-msg" class="error-msg"></p>
+        </div>
+    </div>
+
+    <div id="error-overlay" class="overlay hidden">
+        <div class="error-card glass-card">
+            <h2>¿Quién eres? 🤨</h2>
+            <div class="gif-container">
+                <img src="assets/error-login.gif" alt="Error GIF" id="error-gif">
+            </div>
+            <p>Credenciales incorrectas. Intenta de nuevo.</p>
+            <button id="retry-btn" class="btn-retry">Intentarlo de nuevo</button>
+        </div>
+    </div>
+
+    <div id="letter-overlay" class="overlay hidden">
+        <div class="letter-card paper-card">
+            <button id="close-letter" class="close-btn-dark">&times;</button>
+            <div class="letter-content">
+                <p>Mi Valeria tan lindota,</p>
+                
+                Hoy es <strong>San Valentín</strong>, y aunque la distancia nos separe en kilómetros, nunca pudo separar lo que siento por vos. No te voy a mentir, me encantaría poder abrazarte ahora mismo, compartir unos helados o simplemente caminar juntos… pero incluso así, lejos, lográs hacer que mis días sean mejores.  
+
+                            Sos esa persona que, aunque esté del otro lado de la pantalla, me hace sentir acompañado. La que con un mensaje me cambia el humor, con una llamada me calma y con su risa me recuerda por qué vale la pena todo esto.  
+
+                            La distancia no es fácil, pero si es con vos, la aguanto mil veces. Porque sé que cada charla, cada noche hablando, cada “te extraño” y cada plan para vernos algún día, hacen que todo tenga sentido.  
+                <p>Eres mi presente y quiero que seas mi futuro, quiero que estemos juntos por siempre, que
+                    que sigamos apoyandonos mutuamente.</p>
+                <p>Te amo, mi futura esposa.</p>
+                <p class="signature">Jesus, la persona que te amará por siempre.</p>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <img src="assets/jv-logo.png" alt="Logo JV" height="75">
+        <div class="nav-logo">2° San Valentin Juntos </div>
+        <ul class="nav-links">
+            <li><a href="#hero">Inicio</a></li>
+            <li><a href="#reasons">Razones</a></li>
+            <li><a href="#gallery">Valores</a></li>
+            <li><a href="#letter">Carta</a></li>
+        </ul>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+<button id="flower-btn" class="flower-fab">
+<svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+  <circle cx="12" cy="12" r="3" fill="#bfe9ff"/>
+  <path d="M12 2C13.5 4.5 15.5 6 18 6C17 8.5 15 10 12 10C9 10 7 8.5 6 6C8.5 6 10.5 4.5 12 2Z" fill="#4da6ff"/>
+  <path d="M22 12C19.5 13.5 18 15.5 18 18C15.5 17 14 15 14 12C14 9 15.5 7 18 6C18 8.5 19.5 10.5 22 12Z" fill="#4da6ff"/>
+  <path d="M12 22C10.5 19.5 8.5 18 6 18C7 15.5 9 14 12 14C15 14 17 15.5 18 18C15.5 18 13.5 19.5 12 22Z" fill="#4da6ff"/>
+  <path d="M2 12C4.5 10.5 6 8.5 6 6C8.5 7 10 9 10 12C10 15 8.5 17 6 18C6 15.5 4.5 13.5 2 12Z" fill="#4da6ff"/>
+</svg>
+</button>
+
+
+
+    <section id="flowers-section" class="section">
+        <button id="close-flowers" class="close-btn">&times;</button>
+        <div class="night"></div>
+        <div class="flowers">
+            <div class="flower flower--1">
+                <div class="flower__leafs flower__leafs--1">
+                    <div class="flower__leaf flower__leaf--1"></div>
+                    <div class="flower__leaf flower__leaf--2"></div>
+                    <div class="flower__leaf flower__leaf--3"></div>
+                    <div class="flower__leaf flower__leaf--4"></div>
+                    <div class="flower__white-circle"></div>
+
+                    <div class="flower__light flower__light--1"></div>
+                    <div class="flower__light flower__light--2"></div>
+                    <div class="flower__light flower__light--3"></div>
+                    <div class="flower__light flower__light--4"></div>
+                    <div class="flower__light flower__light--5"></div>
+                    <div class="flower__light flower__light--6"></div>
+                    <div class="flower__light flower__light--7"></div>
+                    <div class="flower__light flower__light--8"></div>
+
+                </div>
+                <div class="flower__line">
+                    <div class="flower__line__leaf flower__line__leaf--1"></div>
+                    <div class="flower__line__leaf flower__line__leaf--2"></div>
+                    <div class="flower__line__leaf flower__line__leaf--3"></div>
+                    <div class="flower__line__leaf flower__line__leaf--4"></div>
+                    <div class="flower__line__leaf flower__line__leaf--5"></div>
+                    <div class="flower__line__leaf flower__line__leaf--6"></div>
+                </div>
+            </div>
+
+            <div class="flower flower--2">
+                <div class="flower__leafs flower__leafs--2">
+                    <div class="flower__leaf flower__leaf--1"></div>
+                    <div class="flower__leaf flower__leaf--2"></div>
+                    <div class="flower__leaf flower__leaf--3"></div>
+                    <div class="flower__leaf flower__leaf--4"></div>
+                    <div class="flower__white-circle"></div>
+
+                    <div class="flower__light flower__light--1"></div>
+                    <div class="flower__light flower__light--2"></div>
+                    <div class="flower__light flower__light--3"></div>
+                    <div class="flower__light flower__light--4"></div>
+                    <div class="flower__light flower__light--5"></div>
+                    <div class="flower__light flower__light--6"></div>
+                    <div class="flower__light flower__light--7"></div>
+                    <div class="flower__light flower__light--8"></div>
+
+                </div>
+                <div class="flower__line">
+                    <div class="flower__line__leaf flower__line__leaf--1"></div>
+                    <div class="flower__line__leaf flower__line__leaf--2"></div>
+                    <div class="flower__line__leaf flower__line__leaf--3"></div>
+                    <div class="flower__line__leaf flower__line__leaf--4"></div>
+                </div>
+            </div>
+
+            <div class="flower flower--3">
+                <div class="flower__leafs flower__leafs--3">
+                    <div class="flower__leaf flower__leaf--1"></div>
+                    <div class="flower__leaf flower__leaf--2"></div>
+                    <div class="flower__leaf flower__leaf--3"></div>
+                    <div class="flower__leaf flower__leaf--4"></div>
+                    <div class="flower__white-circle"></div>
+
+                    <div class="flower__light flower__light--1"></div>
+                    <div class="flower__light flower__light--2"></div>
+                    <div class="flower__light flower__light--3"></div>
+                    <div class="flower__light flower__light--4"></div>
+                    <div class="flower__light flower__light--5"></div>
+                    <div class="flower__light flower__light--6"></div>
+                    <div class="flower__light flower__light--7"></div>
+                    <div class="flower__light flower__light--8"></div>
+
+                </div>
+                <div class="flower__line">
+                    <div class="flower__line__leaf flower__line__leaf--1"></div>
+                    <div class="flower__line__leaf flower__line__leaf--2"></div>
+                    <div class="flower__line__leaf flower__line__leaf--3"></div>
+                    <div class="flower__line__leaf flower__line__leaf--4"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hero" class="section hero">
+        <div class="hero-content">
+            <h1 class="animate-text">Olaaaa mi vida hermosaaaa</h1>
+            <p class="subtitle">Junto a tí casi por dos años y 2 San Valentin juntos</p>
+            <div class="timer-container glass-card">
+                <h3>Nuestro tiempo juntos</h3>
+                <div id="timer">
+                    <div class="time-box">
+                        <span id="days">00</span>
+                        <small>Días</small>
+                    </div>
+                    <div class="time-box">
+                        <span id="hours">00</span>
+                        <small>Horas</small>
+                    </div>
+                    <div class="time-box">
+                        <span id="minutes">00</span>
+                        <small>Minutos</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reasons" class="section">
+    <h2 class="section-title">Por Qué Te Amo</h2>
+    <div class="reasons-grid">
+
+        <div class="reason-card glass-card">
+            <div class="icon">
+                <!-- sonrisa -->
+                <svg viewBox="0 0 24 24" width="40" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                    <line x1="9" y1="9" x2="9.01" y2="9"/>
+                    <line x1="15" y1="9" x2="15.01" y2="9"/>
+                </svg>
+            </div>
+            <h3>Tu Sonrisa</h3>
+            <p>Ilumina hasta mis días más oscuros.</p>
+        </div>
+
+        <div class="reason-card glass-card">
+            <div class="icon">
+                <!-- chat -->
+                <svg viewBox="0 0 24 24" width="40" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/>
+                </svg>
+            </div>
+            <h3>Nuestra Conexión</h3>
+            <p>Aunque haya kilómetros entre nosotros, siempre siento que estás conmigo.</p>
+        </div>
+
+        <div class="reason-card glass-card">
+            <div class="icon">
+                <!-- corazón manos -->
+                <svg viewBox="0 0 24 24" width="40" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21s-6-4.35-9-8a5 5 0 0 1 8-6l1 1 1-1a5 5 0 0 1 8 6c-3 3.65-9 8-9 8z"/>
+                </svg>
+            </div>
+            <h3>Tu Esfuerzo</h3>
+            <p>Porque elegís amarme incluso cuando la distancia lo hace difícil.</p>
+        </div>
+
+        <div class="reason-card glass-card">
+            <div class="icon">
+                <!-- telefono -->
+                <svg viewBox="0 0 24 24" width="40" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="7" y="2" width="10" height="20" rx="2"/>
+                    <line x1="11" y1="18" x2="13" y2="18"/>
+                </svg>
+            </div>
+            <h3>Tus Mensajes</h3>
+            <p>Un solo mensaje tuyo puede alegrarme todo el día.</p>
+        </div>
+
+        <div class="reason-card glass-card">
+            <div class="icon">
+                <!-- apoyo estrella -->
+                <svg viewBox="0 0 24 24" width="40" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9"/>
+                </svg>
+            </div>
+            <h3>Tu Apoyo</h3>
+            <p>Siempre estás ahí para impulsarme a ser mejor.</p>
+        </div>
+
+        <div class="reason-card glass-card">
+            <div class="icon">
+                <!-- musica -->
+                <svg viewBox="0 0 24 24" width="40" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 18V5l12-2v13"/>
+                    <circle cx="6" cy="18" r="3"/>
+                    <circle cx="18" cy="16" r="3"/>
+                </svg>
+            </div>
+            <h3>Tu Risa</h3>
+            <p>Es la melodía más bonita que he escuchado.</p>
+        </div>
+
+    </div>
+</section>
+
+
+ <section id="gallery" class="section">
+    <h2 class="section-title">Nuestros Valores</h2>
+    <div class="reasons-grid">
+
+        <div class="reason-card glass-card">
+            <div class="icon">
+                <!-- corazón -->
+                <svg viewBox="0 0 24 24" width="40" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21s-6-4.35-9-8a5 5 0 0 1 8-6l1 1 1-1a5 5 0 0 1 8 6c-3 3.65-9 8-9 8z"/>
+                </svg>
+            </div>
+            <h3>Amor</h3>
+            <p>Amarnos incluso a kilómetros de distancia.</p>
+        </div>
+
+        <div class="reason-card glass-card">
+            <div class="icon">
+                <!-- escudo confianza -->
+                <svg viewBox="0 0 24 24" width="40" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6z"/>
+                </svg>
+            </div>
+            <h3>Confianza</h3>
+            <p>Creer siempre el uno en el otro.</p>
+        </div>
+
+        <div class="reason-card glass-card">
+            <div class="icon">
+                <!-- reloj paciencia -->
+                <svg viewBox="0 0 24 24" width="40" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                </svg>
+            </div>
+            <h3>Paciencia</h3>
+            <p>Saber que la espera vale la pena.</p>
+        </div>
+
+        <div class="reason-card glass-card">
+            <div class="icon">
+                <!-- mensaje -->
+                <svg viewBox="0 0 24 24" width="40" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/>
+                </svg>
+            </div>
+            <h3>Comunicación</h3>
+            <p>Hablar siempre con el corazón.</p>
+        </div>
+
+        <div class="reason-card glass-card">
+            <div class="icon">
+                <!-- estrella esperanza -->
+                <svg viewBox="0 0 24 24" width="40" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9"/>
+                </svg>
+            </div>
+            <h3>Esperanza</h3>
+            <p>Soñar con el día en que estemos juntos.</p>
+        </div>
+
+        <div class="reason-card glass-card">
+    <div class="icon">
+        <!-- carta / detalles -->
+        <svg viewBox="0 0 24 24" width="40" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="5" width="18" height="14" rx="2"/>
+            <polyline points="3 7 12 13 21 7"/>
+        </svg>
+    </div>
+    <h3>Detalles</h3>
+    <p>Cuidar las pequeñas cosas que mantienen vivo el amor.</p>
+</div>
+
+
+    </div>
+</section>
+
+
+    <section id="letter" class="section letter-section">
+        <h2 class="section-title">Una Carta Para Ti</h2>
+        <div class="envelope-wrapper" id="envelope">
+            <div class="envelope">
+                <div class="flap"></div>
+                <div class="body"></div>
+                <div class="letter">
+                    <div class="text">
+                        <p>¡Haz click abajo para leer!</p>
+                    </div>
+                </div>
+            </div>
+            <button id="open-letter-btn" class="btn-open">Abrir Carta 💌</button>
+        </div>
+
+        <br><br><br><br>
+        <div style="text-align: center; margin-top: 6rem;">
+            <h3>Tengo algo importante que preguntarte...</h3>
+            <a href="valentine.html" class="btn-scroll btn-question"
+                style="background: var(--primary-color); padding: 15px 30px; border-radius: 50px; color: white; margin-top: 20px; display: inline-block; font-size: 1.2rem; font-weight: bold; animation: pulse 2s infinite;">Click
+                Aquí 👉</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>Hecho con todo mi amor para ti. Feliz San Valentin Valeria.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
