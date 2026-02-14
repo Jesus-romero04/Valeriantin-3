@@ -881,6 +881,14 @@ section {
     margin: auto;
 }
 
+.navbar a img{
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.navbar a img:hover{
+    transform:scale(1.05);
+}
 
 
 
